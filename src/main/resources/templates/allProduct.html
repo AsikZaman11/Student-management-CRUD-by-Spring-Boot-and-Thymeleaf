@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<h2>Add Employee</h2>
+<br>
+<a th:href="@{/saveform}" class="btn btn-primary mb-2">Add Product</a>
+
+<h1>List of Product</h1>
+<table>
+<tr>
+<td>Name</td>
+<td>Brand</td>
+</tr>
+<tr th:each="pro, iterator:${pd}">
+<td th:text="${pro.name}">Name</td>
+<td th:text="${pro.brand}">Brand</td>
+<td ><a th:href="@{/deleteform}">Delete</a>
+</td>
+</tr>
+</table>
+<body>
+</html>
